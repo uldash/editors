@@ -4,7 +4,7 @@ set number
 filetype on
 filetype plugin on
 filetype indent on
-syntax on
+syntax off
 " Поиск в процессе набора
 set incsearch
 " Подсвечивание результатов поиска
@@ -30,3 +30,15 @@ set t_Co=256
 "set backup
 " Вертикальная линия после 120 символов
 set colorcolumn=120
+
+"Менеджер плагинов патоген, грузит все плагины из папки $HOME/.vim/bundle
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+"Плагин для автоподстановки C-x C-o после точки
+let g:neocomplete#enable_at_startup = 1
+set completeopt-=preview
+
+"Подключаем боковую панель с навигацией
+autocmd vimenter * NERDTree
