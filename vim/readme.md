@@ -29,7 +29,7 @@ git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 
 ## Установка
 
-для работы плагина нужна поддержка lua, когда устанавливаеш vim нужно ставить не viv, а vim-nox
+для работы плагина нужна поддержка lua, когда устанавливаеш vim нужно ставить не vim, а vim-nox
 cd ~/.vim/bundle && git clone https://github.com/Shougo/neocomplete.vim.git
 В .vimrc добавим
 let g:neocomplete#enable_at_startup = 1
