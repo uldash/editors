@@ -1,2 +1,0 @@
-# editors
-vim emacs
