@@ -12,5 +12,7 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim/
 Запускаем vim
 
 :PluginInstall	- установить все плагины, которые заданы в .vimrc
+
 :BundleClean	- удалить плагины, которые не прописаны в .vimrc
+
 :BundleList	- посмотреть список всех установленных плагинов 
