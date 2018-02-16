@@ -78,7 +78,9 @@ set enc=utf-8
 set ls=2
 set incsearch
 set hlsearch
-set nu
+set number
+set showcmd
+"set relativenumber
 set scrolloff=5
 
 "Отключаем бэкапы и свопфайлы
@@ -121,7 +123,16 @@ map <F3> :NERDTreeToggle<CR>
 "TaskList настройки
 map <F2> :TaskList<CR> "Отобразить список тасков и туду
 map <leader>bd :bd<CR> " <esc>\bd - закрыть текущий буфер
-map <C-w> :bd<CR> " <esc>\bd - закрыть текущий буфер
+map <C-q> :bd<CR> " <esc>\bd - закрыть текущий буфер
+
+" allows cursor change in tmux mode
+if exists('$TMUX')
+	let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+	let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+	let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+	let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
 
 "===============================================================
 " Python-mode settings
